@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset='utf-8'>
-        <title>paiza bbs</title>
+        <title>Laravel_lesson</title>
         @include('style-sheet')
     </head>
     <body>

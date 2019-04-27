@@ -1,7 +1,7 @@
 <?php
 
 Route::get('/', function () {
-    return redirect('/articles');
+    return view('welcome');
 });
 
 // paiza演習(一行掲示板)
@@ -42,6 +42,10 @@ Route::resource('posts', 'PostsController', ['only' => ['create', 'store', 'show
 Route::get('contact', 'ContactController@index')->name('contact');
 Route::post('contact/confirm', 'ContactController@confirm')->name('confirm');
 Route::post('contact/sent', 'ContactController@sent')->name('sent');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 

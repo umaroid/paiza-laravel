@@ -11,4 +11,9 @@ class Shop extends Model
         // Categoryテーブルと関連ずけ
         return $this->belongsTo('App\Category');
     }
+    
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }
